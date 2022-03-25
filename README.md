@@ -30,22 +30,24 @@ createdAt: // timestamp
 }
 
 Link to Commented First Draft Schema
-(TODO: create a first draft of your Schemas in db.js and link to it\_)
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/backend/db.js
 
 Wireframes
 
 /hangman - is the page verification for users where they can log in
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/frame-layout/Screen%20Shot%202022-03-25%20at%204.10.34%20PM.png
 
 /hangman/signup - if they are a new user they can sign up to become a user
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/frame-layout/Screen%20Shot%202022-03-25%20at%204.13.38%20PM.png
 
 /hangman/play - is the actual game which has a bunch of blanks and allows the user to input keys and guess the word.
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/frame-layout/Screen%20Shot%202022-03-25%20at%204.18.42%20PM.png
 
 /hangman/words - a list of all the current words, also allows users to add words of their own.
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/frame-layout/Screen%20Shot%202022-03-25%20at%204.20.42%20PM.png
 
 Site map
-(TODO: draw out a site map that shows how pages are related to each other\_)
-
-Here's a complex example from wikipedia, but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/frame-layout/Screen%20Shot%202022-03-25%20at%203.58.26%20PM.png
 
 User Stories or Use Cases
 
@@ -60,8 +62,8 @@ Research Topics
 (1 points) Heroku
 I'm planning to use Heroku in order to run my application. Im hoping to learn how to use Heroku to be able to run both a front and backend application.
 
-(2 points) Bootstrap
-I believe that Bootstrap is a framework that allows for better styling in
+(2 points) React-Bootstrap
+I believe that Bootstrap is a library that allows for better styling in
 React.js. I hope to use it to make my project look nicer and hopefully
 the learning curve is not too hard. Since Bootstrap does not seem to be
 an entire langauge that needs to be learned I awarded it 2 points.
@@ -73,7 +75,7 @@ Although we will learn React at the end of the semester, I beleive that I will h
 8 points total out of 8 required points
 
 Link to Initial Main Project File
-(TODO: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js\_)
+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/blob/master/backend/app.js
 
 Annotations / References Used
 
