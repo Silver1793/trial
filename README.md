@@ -1,117 +1,81 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
+Richard Li Hangman
 
-(__TODO__: your project name_)
+Overview
 
-# Shoppy Shoperson 
+Im planning on creating a hangman game where people have a certain amount of lives and they must guess the word within that time. There will be a score as well where for each word that the user guesses before they run out of lives, their score will increment. At the end their score will be saved to their username so that they will have a highscore that will show.
 
-## Overview
+Data Model
 
-(__TODO__: a brief one or two paragraph, high-level description of your project_)
+The application will store Users, Lists of words
 
-Remembering what to buy at the grocery store is waaaaay too difficult. Also, shopping for groceries when you're hungry leads to regrettable purchases. Sooo... that's where Shoppy Shoperson comes in!
+users can have one list containing mulitple words (via references)
+each user has their own name and password
+each word has its own name and length
 
-Shoppy Shoperson is a web app that will allow users to keep track of multiple grocery lists. Users can register and login. Once they're logged in, they can create or view their grocery list. For every list that they have, they can add items to the list or cross off items.
-
-
-## Data Model
-
-(__TODO__: a description of your application's data and their relationships to each other_) 
-
-The application will store Users, Lists and Items
-
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
-
-(__TODO__: sample documents_)
-
-An Example User:
-
-```javascript
 {
-  username: "shannonshopper",
-  hash: // a password hash,
-  lists: // an array of references to List documents
+username: "richardli",
+hash: // a password hash,
+score: 0 //Starts off as 0 for all users
 }
-```
-
 An Example List with Embedded Items:
 
-```javascript
 {
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
+user: // a reference to a User object
+name: "Word List",
+words: [
+{ name: "silver", length: "6"},
+{ name: "gold", length: "4"},
+],
+createdAt: // timestamp
 }
-```
 
+Link to Commented First Draft Schema
+(TODO: create a first draft of your Schemas in db.js and link to it\_)
 
-## [Link to Commented First Draft Schema](db.js) 
+Wireframes
 
-(__TODO__: create a first draft of your Schemas in db.js and link to it_)
+/hangman - is the page verification for users where they can log in
 
-## Wireframes
+/hangman/signup - if they are a new user they can sign up to become a user
 
-(__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc._)
+/hangman/play - is the actual game which has a bunch of blanks and allows the user to input keys and guess the word.
 
-/list/create - page for creating a new shopping list
+/hangman/words - a list of all the current words, also allows users to add words of their own.
 
-![list create](documentation/list-create.png)
+Site map
+(TODO: draw out a site map that shows how pages are related to each other\_)
 
-/list - page for showing all shopping lists
+Here's a complex example from wikipedia, but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
 
-![list](documentation/list.png)
+User Stories or Use Cases
 
-/list/slug - page for showing specific shopping list
+as non-registered user, I can register a new account with the site
+as a user, I can log in to the site
+as a user, I can view my score which is 0 if this is the first time logged in
+as a user, I can input keys and try and guess the word
+as a user, I can see the list of words
+as a user, I can create my own word and add it to the list where it will be saved later
+Research Topics
 
-![list](documentation/list-slug.png)
+(1 points) Heroku
+I'm planning to use Heroku in order to run my application. Im hoping to learn how to use Heroku to be able to run both a front and backend application.
 
-## Site map
+(2 points) Bootstrap
+I believe that Bootstrap is a framework that allows for better styling in
+React.js. I hope to use it to make my project look nicer and hopefully
+the learning curve is not too hard. Since Bootstrap does not seem to be
+an entire langauge that needs to be learned I awarded it 2 points.
 
-(__TODO__: draw out a site map that shows how pages are related to each other_)
+(5 points) React.js
+using React.js as the frontend framework;
+Although we will learn React at the end of the semester, I beleive that I will have to learn it myself in order to complete this project. As a result I will award it 5 points.
 
-Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/20/Sitemap_google.jpg), but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
+8 points total out of 8 required points
 
-## User Stories or Use Cases
+Link to Initial Main Project File
+(TODO: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js\_)
 
-(__TODO__: write out how your application will be used through [user stories](http://en.wikipedia.org/wiki/User_story#Format) and / or [use cases](https://www.mongodb.com/download-center?jmp=docs&_ga=1.47552679.1838903181.1489282706#previous)_)
+Annotations / References Used
 
-1. as non-registered user, I can register a new account with the site
-2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
-
-## Research Topics
-
-(__TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed_)
-
-* (5 points) Integrate user authentication
-    * I'm going to be using passport for user authentication
-    * And account has been made for testing; I'll email you the password
-    * see <code>cs.nyu.edu/~jversoza/ait-final/register</code> for register page
-    * see <code>cs.nyu.edu/~jversoza/ait-final/login</code> for login page
-* (4 points) Perform client side form validation using a JavaScript library
-    * see <code>cs.nyu.edu/~jversoza/ait-final/my-form</code>
-    * if you put in a number that's greater than 5, an error message will appear in the dom
-* (5 points) vue.js
-    * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
-
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit_)
-
-
-## [Link to Initial Main Project File](app.js) 
-
-(__TODO__: create a skeleton Express application with a package.json, app.js, views folder, etc. ... and link to your initial app.js_)
-
-## Annotations / References Used
-
-(__TODO__: list any tutorials/references/etc. that you've based your code off of_)
-
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
-2. [tutorial on vue.js](https://vuejs.org/v2/guide/) - (add link to source code that was based on this)
-
+React-Bootstrap docs - https://github.com/react-bootstrap/react-bootstrap
+React.js documentation - https://reactjs.org/docs/getting-started.html
