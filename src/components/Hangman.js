@@ -8,9 +8,10 @@ function Hangman() {
   const [word, setWord] = useState(""); //useState(chooseRandom());
   const [over, setOver] = useState(false);
   const [guessed, setGuessed] = useState([]);
+  const baseUrl = process.env.baseURL || "http://localhost:6001";
 
   useEffect(() => {
-    axios.get("http://localhost:6001/words").then(function (response) {
+    axios.get(baseUrl + "/words").then(function (response) {
       setWord(response.data);
     });
   }, []);
@@ -26,7 +27,9 @@ function Hangman() {
       .map((letter) => (guessed.includes(letter) ? letter : " _ "));
   };
   const reset = () => {
-    setWord(chooseRandom());
+    axios.get(baseUrl + "/words").then(function (response) {
+      setWord(response.data);
+    });
     setOver(false);
     setGuessed([]);
     setMistake(0);
