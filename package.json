@@ -1,0 +1,26 @@
+{
+  "name": "final-project-silver1793",
+  "version": "1.0.0",
+  "description": "Richard Li Hangman",
+  "main": "index.js",
+  "scripts": {
+    "start":"concurrently --kill-others-on-fail  \"npm run frontend\" \"npm run api\"",
+    "frontend": "cd final && npm start",
+    "api": "cd backend && node app.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run frontend\"",
+    "heroku-postbuild": "cd final && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-Silver1793#readme",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}

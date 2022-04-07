@@ -12,6 +12,24 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.centered {
+  /* height: 100vh; Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-sub {
+  color: #2f3c7e;
+  background-color: #fbeaeb;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.btn-alpha {
+  color: #2f3c7e;
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
 
 .App-header {
   background-color: #282c34;
