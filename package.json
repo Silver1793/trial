@@ -82,7 +82,7 @@
     "start": "node app.js",
     "heroku-postbuild":"npm run install-client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd backend && npm run build",
+    "build": "cd final && npm run build",
     "install-client": "cd final && npm run install",
     "client": "cd final && npm start",
     "dev":"concurrently -n 'server, client' -c 'red,green' \" nodemon app.js\" \" npm run final \""
